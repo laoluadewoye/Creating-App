@@ -8,4 +8,9 @@ import { Greeting } from '../components/greeting/greeting';
   styleUrl: './home.scss'
 })
 export class Home {
+  homeMessage = signal('Hello, Home! Exported');
+
+  keyUpHandler(event: KeyboardEvent) {
+    console.log(`user pressed the ${event.key} key`);
+  }
 }
